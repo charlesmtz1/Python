@@ -29,3 +29,43 @@ def imprimir(lista):
 colores = ["Rojo", "Azul", "Negro"]
 
 imprimir(colores)
+
+#Las funciones permiten retornar valores, ya sean numericos o de cadena.
+def suma(x):
+        return 5 + x
+
+print(suma(3))
+print(suma(10))
+print(suma(2))
+
+numero = 7
+resultado = suma(numero)
+
+print(resultado)
+
+#Las funciones tambien pueden ser recursivas.
+def tri_recursion(k):
+  if(k>0):
+    result = k+tri_recursion(k-1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
