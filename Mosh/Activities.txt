@@ -1,0 +1,13 @@
+***************************
+*****PYTHON ACTIVITIES*****         https://www.youtube.com/watch?v=_uQrJ0TkZlc     Continue in 29:33
+***************************
+
+1- We check in a patient named John Smith. He's 20 yeas old and is a new patient. Declare three variables with this information.
+
+2- Ask two questions: person's name and favourite color. Then, print a message like "Mosh likes blue. 
+
+3- Ask a user their weight (in pounds), convert it to kilograms and print on the terminal.
+
+**********************
+***** LET'S CODE!*****
+**********************

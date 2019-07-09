@@ -20,12 +20,30 @@ def longitud_lista(lista):
     print("El numero de elementos en la lista es de:", elementos)
 
 
-cadena = "Intel"
-lista = list(("Rei", "Dia", "Umi"))
+print("----------------------------------")
+print("---Longitud de cadenas y listas---")
+print("----------------------------------")
+print("")
+
+opcion = 0
+
+while opcion == 0:
+    print("Que tipo de dato deseas analizar? Selecciona la opcion del menu:")
+    print("1. Cadena.")
+    print("2. Lista")
+    print("0. Salir")
+    print("")
+    opcion = int(input("Opcion: "))
+
+    if opcion == 1:
+        cadena = input("Escribe una cadena: ")
+    elif opcion == 2:
+        elemento = int(input("Cuantos elementos tendra tu lista?: "))
+
 
 longitud(cadena)
 print("---------------------------")
-longitud_lista(lista)
+#longitud_lista()
 
 print("----------------------------")
 print("------Fin de ejecucion------")

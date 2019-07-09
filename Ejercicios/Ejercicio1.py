@@ -3,16 +3,28 @@
 
 def max(num1, num2):
     print("Validando numeros...")
+    txt = "El numero mayor es: {}"
+
     if num1 > num2:
-        print("El numero mayor es:", num1)
+        print(txt.format(num1))
+    elif num1 == num2:
+        print("Ambos numeros son iguales!")
     else:
-        print("El numero mayor es:", num2)
+        print(txt.format(num2))
 
-x = 3
-y = 5
 
-max(x, y)
+print("----------------------------")
+print("----Validador de numeros----")
+print("----------------------------")
+print("")
 
+num1 = int(input("Escriba el primer numero: "))
+num2 = int(input("Escriba el segundo numero: "))
+
+print("")
+max(num1, num2)
+
+print("")
 print("----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")
