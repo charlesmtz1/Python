@@ -2,7 +2,7 @@
 #Definir una función max_de_tres(), que tome tres números como argumentos y devuelva el mayor de ellos. 
 
 def max_de_tres(num1, num2, num3):
-    print("Validando tres numeros...")
+    print("\nValidando tres numeros...")
     txt = "El numero mayor es: {}"
 
     if num1 == num2 and num1 == num3:
@@ -17,17 +17,14 @@ def max_de_tres(num1, num2, num3):
 
 print("----------------------------")
 print("----Validador de numeros----")
-print("----------------------------")
-print("")
+print("----------------------------\n")
 
 num1 = int(input("Escribe el primer numero: "))
 num2 = int(input("Escribe el segundo numero: "))
 num3 = int(input("Escribe el ultimo numero: "))
 
-print("")
 max_de_tres(num1, num2, num3)
 
-print("")
-print("----------------------------")
+print("\n----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")

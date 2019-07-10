@@ -2,20 +2,37 @@
 #Escribir una función que tome un carácter y devuelva True si es una vocal, de lo contrario devuelve False.
 
 def validador(caracter):
-    print("Validando caracter insertado...")
+    vocales = "aeiou"
+    no_vocal = True
 
-    if caracter == 'a' or caracter == 'e' or caracter == 'i' or caracter == 'o' or caracter == 'u':
-        txt = "El caracter {} es una vocal!"
-        print(txt.format(caracter.upper()))
-    else:
+    print("\nValidando caracter insertado...")
+
+    for x in vocales:
+        if caracter.lower() == x:
+            no_vocal = False
+            txt = "El caracter {} es una vocal!"
+            print(txt.format(caracter.upper()))
+            break
+    
+    if no_vocal == True:
         txt = "El caracter {} no es vocal..."
         print(txt.format(caracter.upper()))
 
 
-caracter = 'r'
+print("-----------------------------")
+print("---Validador de caracteres---")
+print("-----------------------------\n")
 
-validador(caracter)
+while True:
+    caracter = input("Escribe un caracter: ")
 
-print("----------------------------")
+    if len(caracter) < 2:
+        validador(caracter)
+        break
+    else:
+        print("Solo se puede escribir un caracter!\n")
+    
+
+print("\n----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")

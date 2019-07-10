@@ -60,7 +60,7 @@ while opcion == 0:
         break
 
     else:
-        print("Opcion no valida!")
+        print("Opcion no valida!\n")
     
     opcion = 0
 

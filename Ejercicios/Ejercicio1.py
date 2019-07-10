@@ -2,7 +2,7 @@
 #Definir una función max() que tome como argumento dos números y devuelva el mayor de ellos.
 
 def max(num1, num2):
-    print("Validando numeros...")
+    print("\nValidando numeros...")
     txt = "El numero mayor es: {}"
 
     if num1 > num2:
@@ -15,16 +15,13 @@ def max(num1, num2):
 
 print("----------------------------")
 print("----Validador de numeros----")
-print("----------------------------")
-print("")
+print("----------------------------\n")
 
 num1 = int(input("Escriba el primer numero: "))
 num2 = int(input("Escriba el segundo numero: "))
 
-print("")
 max(num1, num2)
 
-print("")
-print("----------------------------")
+print("\n----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")
