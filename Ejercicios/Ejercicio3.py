@@ -3,27 +3,31 @@
 
 def longitud(cadena):
     tamano = 0
-    print("Validando cadena...")
+    txt = "El tamaño de la cadena es de: {} \n\n"
+    validador = "Caracter recibido: {}"
+
+    print("\nValidando cadena...")
     for x in cadena:
-        print("Caracter recibido:", x)
+        print(validador.format(x))
         tamano += 1
 
-    print("El tamaño de la cadena es de:", tamano)
+    print(txt.format(tamano))
 
-def longitud_lista(lista):
-    elementos = 0
-    print("Validando lista...")
+def longitud_lista(lista, elementos):
+    txt = "El numero de elementos en la lista es de: {} \n\n"
+    validador = "Elemento procesado: {}"
+
+    print("\nValidando lista...")
     for x in lista:
-        print("Elemento procesado:", x)
+        print(validador.format(x))
         elementos += 1
 
-    print("El numero de elementos en la lista es de:", elementos)
+    print(txt.format(elementos))
 
 
 print("----------------------------------")
 print("---Longitud de cadenas y listas---")
-print("----------------------------------")
-print("")
+print("----------------------------------\n")
 
 opcion = 0
 
@@ -37,13 +41,28 @@ while opcion == 0:
 
     if opcion == 1:
         cadena = input("Escribe una cadena: ")
+        longitud(cadena)
+        del cadena
+        
     elif opcion == 2:
-        elemento = int(input("Cuantos elementos tendra tu lista?: "))
+        elementos = int(input("Cuantos elementos tendra tu lista?: "))
+        lista = list((""))
 
+        while elementos > 0:
+            lista.append(input("Escribe el elemento de la lista: "))
+            elementos -= 1
 
-longitud(cadena)
-print("---------------------------")
-#longitud_lista()
+        longitud_lista(lista, elementos)
+        del lista
+        del elementos
+
+    elif opcion == 0:
+        break
+
+    else:
+        print("Opcion no valida!")
+    
+    opcion = 0
 
 print("----------------------------")
 print("------Fin de ejecucion------")
