@@ -4,24 +4,23 @@
 def inversa(cadena):
     posicion = len(cadena) - 1
     invertida = ""
-
-    #while posicion >= 0:
-     #   print("Caracter recibido:", cadena[posicion])
-      #  posicion -= 1
+    txt = "\nSe ha devuelto la cadena invertida: {}"
 
     while posicion >= 0:
-        invertida[0] = cadena[posicion]
-        invertida.
+        invertida += cadena[posicion]
+        posicion -=1
+
+    print(txt.format(invertida))
 
 
+print("------------------------------")
+print("-----Validador de cadenas-----")
+print("------------------------------\n")
 
-    print("La cadena ha quedado invertida:", cadena)
-
-
-cadena = "estoy probando"
+cadena = input("Escribe una cadena: ")
 
 inversa(cadena)
 
-print("----------------------------")
+print("\n----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")
