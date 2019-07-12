@@ -21,8 +21,15 @@ def superposicion(lista1, lista2):
         print("No hay elementos en comun en ambas listas...")
             
 
+print("------------------------------")
+print("-----Validador de cadenas-----")
+print("------------------------------\n")
+
 club_de_canto = list(("Mizuki", "Umi", "Dia"))
 club_de_arco = list(("Tomoyo", "Sayaka", "Hinata"))
 
 superposicion(club_de_canto, club_de_arco)
 
+print("\n----------------------------")
+print("------Fin de ejecucion------")
+print("----------------------------")
