@@ -6,18 +6,24 @@
 #*******
 
 def procedimiento(lista):
-    
-    contador = 0
-
+    print("\nGeneracion de histograma:")
     for x in lista:
-        while x > contador:
+        for x in range(x):
             print('*',end="")
-            contador += 1
         print("")
-        contador = 0
         
 
-histograma = list((5,2,10))
+print("------------------------------")
+print("----------Histograma----------")
+print("------------------------------\n")
+
+histograma = list()
+
+for x in range(int(input("Cuantos numeros se incluiran en el histograma?: "))):
+    histograma.append(int(input("Escribe un numero: ")))
 
 procedimiento(histograma)
 
+print("\n----------------------------")
+print("------Fin de ejecucion------")
+print("----------------------------")
