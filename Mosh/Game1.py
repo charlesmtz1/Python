@@ -2,24 +2,21 @@
 
 secreto = 1
 intentos = 1
-win = True
 
 print("Adivina el numero del 1 al 9!! Gana lindos premios :3")
 print("Solo tienes 3 oportunidades :0")
 print("Listo??")
-opcion = int(input("Escribe el numero: "))
 
+while intentos < 4:
+    opcion = int(input("\nEscribe el numero: "))
 
-while intentos < 3:
     if opcion == secreto:
-        win = True
+        print("\nFelicidades!! Haz ganado!! :D")
         break
     else:
-        win = False
-        opcion = int(input("Incorrecto! Vuelve a intentarlo: "))
+        if intentos != 3:
+            print("Incorrecto! Vuelve a intentarlo!")
         intentos += 1
-
-if win:
-    print("Felicidades!! Haz ganado!! :D")
 else:
-    print("Gracias por participar!")
+    print("\nGracias por participar!")
+    

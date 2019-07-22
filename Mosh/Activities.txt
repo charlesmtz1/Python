@@ -1,5 +1,5 @@
 ***************************
-*****PYTHON ACTIVITIES*****         https://www.youtube.com/watch?v=_uQrJ0TkZlc     Continue in 1:11:31
+*****PYTHON ACTIVITIES*****         https://www.youtube.com/watch?v=_uQrJ0TkZlc     Continue in 2:26:31
 ***************************
 
 1- We check in a patient named John Smith. He's 20 yeas old and is a new patient. Declare three variables with this information.
