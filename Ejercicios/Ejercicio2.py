@@ -1,30 +1,34 @@
 #Ejercicio 2
 #Definir una función max_de_tres(), que tome tres números como argumentos y devuelva el mayor de ellos. 
 
-def max_de_tres(num1, num2, num3):
-    print("\nValidando tres numeros...")
-    txt = "El numero mayor es: {}"
+def max_of_three(number_list):
+    max = 0
 
-    if num1 == num2 and num1 == num3:
-        print("Todos los numeros son iguales!!")
-    elif num1 > num2 and num1 > num3:
-        print(txt.format(num1))
-    elif num2 > num1 and num2 > num3:
-        print(txt.format(num2))
-    else:
-        print(txt.format(num3))
+    for number in number_list:
+        if number > max:
+            max = number
+    
+    return max
 
 
 print("----------------------------")
-print("----Validador de numeros----")
+print("------Number Validator------")
 print("----------------------------\n")
 
-num1 = int(input("Escribe el primer numero: "))
-num2 = int(input("Escribe el segundo numero: "))
-num3 = int(input("Escribe el ultimo numero: "))
+number_list = list()
+sets = 1
 
-max_de_tres(num1, num2, num3)
+while sets <= 3:
+    try:
+        number_list.append(int(input(f"Set number {sets}: ")))
+    except ValueError:
+        print("Invalid character!")
+    else:
+        sets += 1
+
+print("\nVerifing...")
+print(f"The biggest number is: {max_of_three(number_list)}")
 
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")

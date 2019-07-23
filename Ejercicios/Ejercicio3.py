@@ -1,17 +1,14 @@
 #Ejercicio 3
 #Definir una función que calcule la longitud de una lista o una cadena dada.
 
-def longitud(cadena):
-    tamano = 0
-    txt = "El tamaño de la cadena es de: {} \n\n"
-    validador = "Caracter recibido: {}"
+def string_lenght(string):
+    lenght = 0
 
-    print("\nValidando cadena...")
-    for x in cadena:
-        print(validador.format(x))
-        tamano += 1
+    for x in string:
+        lenght += 1
 
-    print(txt.format(tamano))
+    return lenght
+
 
 def longitud_lista(lista, elementos):
     txt = "El numero de elementos en la lista es de: {} \n\n"
@@ -26,44 +23,38 @@ def longitud_lista(lista, elementos):
 
 
 print("----------------------------------")
-print("---Longitud de cadenas y listas---")
+print("-----Strings and lists Lenght-----")
 print("----------------------------------\n")
 
-opcion = 0
+option = 0
 
-while opcion == 0:
-    print("Que tipo de dato deseas analizar? Selecciona la opcion del menu:")
-    print("1. Cadena.")
-    print("2. Lista")
-    print("0. Salir")
-    print("")
-    opcion = int(input("Opcion: "))
+while True:
+    print("What kind of data wish you to verify?:")
+    print("1. String.")
+    print("2. List")
+    print("0. Quit\n")
 
-    if opcion == 1:
-        cadena = input("Escribe una cadena: ")
-        longitud(cadena)
-        del cadena
+    option = int(input(">"))
+
+    if option == 1:
+        string = input("Set a string: ")
+        print("\nVerifing...")
+        print(f"String lenght: {string_lenght(string)}")
+        break    
+    elif option == 2:
+        lista = list()
+        items = int(input("Cuantos elementos tendra tu lista?: "))
         
-    elif opcion == 2:
-        elementos = int(input("Cuantos elementos tendra tu lista?: "))
-        lista = list((""))
-
-        while elementos > 0:
+        while items > 0:
             lista.append(input("Escribe el elemento de la lista: "))
-            elementos -= 1
+            items -= 1
 
-        longitud_lista(lista, elementos)
-        del lista
-        del elementos
-
-    elif opcion == 0:
+        longitud_lista(lista, items)
+    elif option == 0:
         break
-
     else:
         print("Opcion no valida!\n")
-    
-    opcion = 0
 
-print("----------------------------")
+print("\n----------------------------")
 print("------Fin de ejecucion------")
 print("----------------------------")

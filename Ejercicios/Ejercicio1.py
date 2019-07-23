@@ -1,27 +1,31 @@
 #Ejercicio 1
 #Definir una función max() que tome como argumento dos números y devuelva el mayor de ellos.
 
-def max(num1, num2):
-    print("\nValidando numeros...")
-    txt = "El numero mayor es: {}"
-
-    if num1 > num2:
-        print(txt.format(num1))
-    elif num1 == num2:
-        print("Ambos numeros son iguales!")
+def max(number_list):
+    if number_list[0] > number_list[1]:
+        return number_list[0]
     else:
-        print(txt.format(num2))
+        return number_list[1]
 
 
 print("----------------------------")
-print("----Validador de numeros----")
+print("------Number Validator------")
 print("----------------------------\n")
 
-num1 = int(input("Escriba el primer numero: "))
-num2 = int(input("Escriba el segundo numero: "))
+number_list = list()
+sets = 1
 
-max(num1, num2)
+while sets <= 2:
+    try:
+        number_list.append(int(input(f"Set number {sets}: ")))
+    except ValueError:
+        print("Invalid character!")
+    else:
+        sets += 1
+
+print("\nVerifing...")
+print(f"The biggest number is: {max(number_list)}")
 
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")
