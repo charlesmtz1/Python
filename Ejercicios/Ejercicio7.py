@@ -2,33 +2,28 @@
 #Definir una función es_palindromo() que reconoce palíndromos (es decir, palabras que tienen el mismo aspecto escritas invertidas), 
 #ejemplo: es_palindromo ("radar") tendría que devolver True.
 
-def es_palindromo(cadena):
-    inicio = 0
-    final = len(cadena) - 1
-    validador = True
+def is_palindrome(string):
+    opposite_position = len(string) - 1
+    palindrome = True
 
-    while final >= 0:
-        if cadena[inicio].lower() == cadena[final].lower():
-            inicio += 1
-            final -= 1
+    for char in string:
+        if char == string[opposite_position]:
+            opposite_position -= 1
         else:
-            validador = False
+            palindrome = False
             break
 
-    if validador == True:
-        print("La palabra es palindromo!")
-    else:
-        print("La palabra", cadena,"no es palindromo...")
+    return palindrome
 
 
 print("------------------------------")
-print("-----Validador de cadenas-----")
+print("-----Palindrome Validator-----")
 print("------------------------------\n")
 
-palabra = input("Escribe una palabra: ")
+string = input("Set a string: ").lower()
 
-es_palindromo(palabra)
+print(f"Your string is palindrome?: {is_palindrome(string)}")
 
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")

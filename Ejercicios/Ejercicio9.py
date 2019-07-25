@@ -2,20 +2,24 @@
 #Definir una función generar_n_caracteres() que tome un entero n y devuelva el caracter multiplicado por n. 
 #Por ejemplo: generar_n_caracteres(5, "x") debería devolver "xxxxx".
 
-def generar_n_caracteres(numero, caracter):
-    txt = "\nEl caracter {} se multiplicara por {} veces..."
-    print(txt.format(caracter, numero))
-    return numero * caracter
+def character_multiplier(char, multiply_times):
+    return char * multiply_times
 
-print("---------------------------------")
-print("---Multiplicador de caracteres---")
-print("---------------------------------\n")
+print("----------------------------------")
+print("-------Character Multiplier-------")
+print("----------------------------------\n")
 
-caracter = input("Escribe un caracter: ")
-repetidor = int(input("Escribe el numero de veces que se multiplicara: "))
+char = input("Set a character > ")
 
-print(generar_n_caracteres(repetidor, caracter))
+while True:
+    try:
+        multiply_times = int(input("How many times you want to multiply your character? >  "))
+        break
+    except ValueError:
+        print("Only set numbers!")
+
+print(f"\nResult: {character_multiplier(char, multiply_times)}")
 
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")

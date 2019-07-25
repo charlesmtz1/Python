@@ -2,53 +2,60 @@
 #Escribir una funcion sum() y una función multip() que sumen y multipliquen respectivamente todos los números de una lista. 
 #Por ejemplo: sum([1,2,3,4]) debería devolver 10 y multip([1,2,3,4]) debería devolver 24.
 
-def sum(numeros):
-    suma = 0
-    txt = "La suma de los numeros de la lista es: {}"
-    for x in numeros:
-        suma += x
-    print(txt.format(suma))
+def plus(number_list):
+    plus = 0
 
-def multip(numeros):
-    producto = 1
-    txt = "El producto de los numeros de la lista es: {}"
-    for x in numeros:
-        producto *= x
-    print(txt.format(producto))
+    for number in number_list:
+        plus += number
+    
+    return plus
+
+def multiply(number_list):
+    times = 1
+
+    for number in number_list:
+        times *= number
+    
+    return times
 
 
-print("-----------Sumador-----------")
-print("--------------y--------------")
-print("---------Multiplicador-------\n")
+print("-----------Plus-----------")
+print("------------&-------------")
+print("---------Multiply---------\n")
 
-numeros = list((""))
-elementos = int(input("Cuantos numeros vas a capturar en la lista?: "))
+number_list = list()
+items_number = int(input("How many number have in your list?: "))
 
-print("\nA continuacion, escribe los numeros que iran dentro de la lista:")
-for x in range(elementos):
-    txt = "Numero {}: "
-    numeros.append(int(input(txt.format(x+1))))
+while len(number_list) < items_number:
+    try:
+        number_list.append(int(input(f"Set number {len(number_list) + 1}: ")))
+    except ValueError:
+        print("You only can set numbers!\n")
+
+print("\nThis is your list:")
+print(number_list)
 
 while True:
-    print("\nEsta es tu lista de numeros:")
-    print(numeros)
-    print("\nSelecciona una opcion del menu: ")
-    print("1. Sumar")
-    print("2. Multiplicar")
-    print("0. Salir\n")
+    print("\nSelect one option: ")
+    print("1. Plus")
+    print("2. Multiply")
+    print("0. Quit\n")
+    
+    try:
+        option = int(input("> "))
 
-    opcion = int(input("Opcion: "))
-
-    if opcion == 1:
-        sum(numeros)
-        break
-    elif opcion == 2:
-        multip(numeros)
-        break
-    elif opcion == 0:
-        break
-    else:
-        print("\n\nOpcion invalida!!")
+        if option == 1:
+            print(f"Result: {plus(number_list)}")
+            break
+        elif option == 2:
+            print(f"Result: {multiply(number_list)}")
+            break
+        elif option == 0:
+            break
+        else:
+            print("\n\nInvalid Option!!")
+    except ValueError:
+        print("Invalid Option!")
 
 print("\n----------------------------")
 print("------Fin de ejecucion------")

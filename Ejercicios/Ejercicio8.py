@@ -2,40 +2,46 @@
 #Definir una función superposicion() que tome dos listas y devuelva True si tienen al menos 1 miembro en común o devuelva False de lo contrario. 
 #Escribir la función usando el bucle for anidado. 
 
-def superposicion(lista1, lista2):
-    elementos_en_comun = 0
-    txt = "\nExisten {} miembros que coinciden en ambos clubes"
+def common_finder(club_1, club_2):
+    common_members = 0
 
-    for x in lista1:
-        for y in lista2:
-            if x == y:
-                elementos_en_comun += 1
-    
-    print("")
-    print(lista1)
-    print(lista2)
+    for member_club_1 in club_1:
+        for member_club_2 in club_2:
+            if member_club_1 == member_club_2:
+                common_members += 1
 
-    if elementos_en_comun > 0:
-        print(txt.format(elementos_en_comun))
-    else:
-        print("\nNo hay miembros en comun en ambos clubes :( ")
+    return common_members
             
 
 print("-------------------------------")
-print("------Validador de listas------")
-print("-------------------------------\n")
+print("---------Compare Lists---------")
+print("-------------------------------")
 
-club_de_canto = list()
-club_de_cocina = list()
+singing_club = list()
+cooking_club = list()
 
-for x in range(int(input("Cuantos integrantes tiene el club de canto?: "))):
-    club_de_canto.append(input("Ingresa al miembro del club!: "))
+while True:
+    try:
+        for x in range(int(input("\nHow many members have the singing club?: "))):
+            singing_club.append(input("Set member name!: "))
+        break
+    except ValueError:
+        print("Only set numbers!")
 
-for x in range(int(input("\nCuantos integrantes tiene el club de cocina?: "))):
-    club_de_cocina.append(input("Ingresa al miembro del club!: "))
+while True:
+    try:
+        for x in range(int(input("\nHow many members have the cooking club?: "))):
+            cooking_club.append(input("Set member name!: "))
+        break
+    except ValueError:
+        print("Only set numbers!")
 
-superposicion(club_de_canto, club_de_cocina)
+print("\nClub list:")
+print(f"Singing club: {singing_club}")
+print(f"Cooking club: {cooking_club}")
+
+print(f"\nExists {common_finder(singing_club, cooking_club)} common members in both clubs.")
 
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")

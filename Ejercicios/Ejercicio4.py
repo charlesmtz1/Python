@@ -1,38 +1,32 @@
 #Ejercicio 4
 #Escribir una función que tome un carácter y devuelva True si es una vocal, de lo contrario devuelve False.
 
-def validador(caracter):
-    vocales = "aeiou"
-    no_vocal = True
+def vowel_validator(char):
+    vowels = "aeiou"
+    is_vowel = False
 
-    print("\nValidando caracter insertado...")
-
-    for x in vocales:
-        if caracter.lower() == x:
-            no_vocal = False
-            txt = "El caracter {} es una vocal!"
-            print(txt.format(caracter.upper()))
+    for vowel in vowels:
+        if char == vowel:
+            is_vowel = True
             break
     
-    if no_vocal == True:
-        txt = "El caracter {} no es vocal..."
-        print(txt.format(caracter.upper()))
+    return is_vowel
 
 
 print("-----------------------------")
-print("---Validador de caracteres---")
+print("-----Character Validator-----")
 print("-----------------------------\n")
 
 while True:
-    caracter = input("Escribe un caracter: ")
+    char = input("Set a character: ").lower()
 
-    if len(caracter) < 2:
-        validador(caracter)
+    if len(char) < 2:
+        print("\nVerifyng...")
+        print(f"The character is vowel?: {vowel_validator(char)}")
         break
     else:
-        print("Solo se puede escribir un caracter!\n")
+        print("Only you can set one character!\n")
     
-
 print("\n----------------------------")
-print("------Fin de ejecucion------")
+print("----------Finished----------")
 print("----------------------------")

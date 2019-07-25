@@ -1,0 +1,25 @@
+Hello World, this a file example!
+
+u's members:
+1.- Honoka Kohsaka
+2.- Kotori Minami
+3.- Umi Sonoda
+4.- Hanayo Koizumi
+5.- Rin Hoshizora
+6.- Maki Nishikino
+7.- Nico Yazawa
+8.- Eri Ayase
+9.- Nozomi Touhou
+
+aqours members:
+1.- Chika Takami
+2.- You Watanabe
+3.- Riko Sakurauchi
+4.- Hanamaru Kunikida
+5.- Yoshiko Tsushima
+6.- Ruby Kurosawa
+7.- Mari Ohara
+8.- Dia Kurosawa
+9.- Kanan Matsuura
+
+EOF
