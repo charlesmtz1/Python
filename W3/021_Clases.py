@@ -22,3 +22,35 @@ p1 = Person("Carlos", 30)   #Se crea nuevo objeto proporcionando los atributos e
 
 print(p1.nombre)    #Se acceden a los atributos del objeto creado
 print(p1.edad)
+
+##############################
+#Las clases contienen metodos, son acciones que puede realizar un objeto. Estos tienen comportamientos similares a las funciones cotidianas de Python.
+
+#El parametro self se utiliza para hacer referencia al objeto activo que esta utilizando los atributos y/o metodos de la clase. Puede llevar cualquier nombre, pero
+#la palabra self es la forma comun de hacer dicha referencia.
+
+class Persona:
+    def __init__(self, nombre):     #Recuerda iniciar constructor con atributos
+        self.nombre = nombre
+
+    def saludo(self):       #Definicion de un metodo. Hace llamado del atributo del objeto al que esta utilizando dicho metodo
+        print(f"Hola, mi nombre es {self.nombre}")   
+
+
+p1 = Persona("Carlos")
+
+p1.saludo() #Se invoca metodo igual que una funcion.
+
+#Se puede modificar el valor de los atributos de un objeto apuntando directamente hacia ellos:
+
+p1.nombre = "Rei"
+
+p1.saludo()
+
+#Tambien se pueden borrar atributos con del
+
+del p1.nombre
+
+#Se pueden destruir objetos completamente
+
+del p1
